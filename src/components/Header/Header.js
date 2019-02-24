@@ -17,7 +17,10 @@ const header = () => (
       </ul>
     </nav>
     <div className="header-message">
-      <h1>I'm a creative freelance web developer doing some awesome work</h1>
+      <h1>
+        I'm a creative freelance web <span className="red-text">developer</span>{' '}
+        doing some awesome work
+      </h1>
     </div>
     <button className="btn btn-blue btn-header">
       See projects <i class="fas fa-arrow-right" />
