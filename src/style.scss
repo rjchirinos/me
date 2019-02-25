@@ -72,12 +72,18 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 90%;
-  margin: auto;
-  color: #fff;
+  left: 5%;
+  h1 {
+    margin: 0;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
   .menu {
     list-style: none;
     .menu-item {
@@ -91,11 +97,19 @@ body {
       a:hover {
         color: #000;
       }
+      a.active {
+        transition: 0.3s;
+        color: #e14d4c;
+      }
     }
   }
 }
 
 .navbar.white {
+  justify-content: flex-end;
+  .logo {
+    display: none;
+  }
   a {
     color: rgba(255, 255, 255, 0.7) !important;
   }
@@ -116,6 +130,15 @@ body {
   }
 }
 
+@keyframes about {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 10%;
+  }
+}
+
 .btn {
   padding: 1rem 1.2rem;
   border: none;
@@ -128,6 +151,31 @@ body {
 .btn-blue {
   background: #145d8e;
   color: #fff;
+}
+
+#about {
+  .about-message {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5%;
+    width: 75%;
+    max-width: 35rem;
+    h1 {
+      font-size: 4rem;
+      transition: 1s;
+    }
+    p {
+      line-height: 1.4rem;
+    }
+    h1:hover {
+      animation-name: about;
+      animation-duration: 0.7s;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
