@@ -12,7 +12,11 @@ body {
   padding: 0; }
 
 .red-text {
-  color: #e14d4c; }
+  color: #e14d4c;
+  transition: 0.3s; }
+
+.red-text:hover {
+  color: #3498db; }
 
 .header {
   margin: 0;
@@ -33,24 +37,28 @@ body {
       margin: 0;
       color: #fff;
       font-size: 4rem;
-      font-weight: 300; }
+      font-weight: 300;
+      line-height: 5rem;
+      cursor: default; }
     .header .header-message p {
       margin: 2rem 0;
       color: #fff; }
-  .header .btn-header {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem; }
-    .header .btn-header i {
-      animation-name: arrow;
-      animation-duration: 0.7s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate; }
+
+.btn-header {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem; }
+  .btn-header i {
+    animation-name: arrow;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  position: fixed;
   width: 90%;
   margin: auto;
   color: #fff; }
@@ -60,11 +68,16 @@ body {
       margin: 1rem 1.5rem;
       display: inline; }
       .navbar .menu .menu-item a {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(0, 0, 0, 0.6);
         text-decoration: none;
         transition: 0.3s; }
       .navbar .menu .menu-item a:hover {
-        color: #fff; }
+        color: #000; }
+
+.navbar.white a {
+  color: rgba(255, 255, 255, 0.7) !important; }
+.navbar.white a:hover {
+  color: #fff !important; }
 
 @keyframes arrow {
   from {
@@ -84,5 +97,10 @@ body {
 .btn-blue {
   background: #145d8e;
   color: #fff; }
+
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: calc(10px + 5 * ((100vw - 300px) / 300)); } }
 
 /*# sourceMappingURL=index.css.map */
