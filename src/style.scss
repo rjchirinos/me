@@ -9,6 +9,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section {
+  max-width: 100rem;
+  margin: auto;
+}
+
 .homepage {
   margin: 0;
   padding: 0;
@@ -28,11 +33,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(
-      120deg,
-      rgba(20, 93, 142, 0.9),
-      rgba(225, 77, 76, 0.4)
-    ),
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
     url('./images/header-image.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -76,6 +77,8 @@ body {
   align-items: center;
   position: fixed;
   width: 90%;
+  max-width: 100rem;
+  margin: auto;
   left: 5%;
   h1 {
     margin: 0;
@@ -181,6 +184,51 @@ body {
 @media screen and (max-width: 600px) {
   html,
   body {
-    font-size: calc(10px + 5 * ((100vw - 300px) / 300));
+    font-size: calc(10px + 6 * ((100vw - 300px) / 300));
+  }
+}
+
+#work {
+  .navbar {
+    position: static;
+    margin-left: 5%;
+  }
+  .work-content {
+    width: 90%;
+    margin: auto;
+  }
+  .work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+  }
+  .project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    img {
+      width: 40%;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .project-content {
+      width: 50%;
+    }
+  }
+  .project-container.reverse {
+    flex-direction: row-reverse;
   }
 }
